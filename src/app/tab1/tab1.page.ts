@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UnviredCordovaSDK } from '@awesome-cordova-plugins/unvired-cordova-sdk/ngx';
 
 @Component({
   selector: 'app-tab1',
@@ -7,6 +8,13 @@ import { Component } from '@angular/core';
 })
 export class Tab1Page {
 
-  constructor() {}
+  constructor(private unviredSDK: UnviredCordovaSDK) {
+    console.log('NgOnInit called. Waiting for call from the Unvired SDK...')
+    unviredSDK.logInfo('Tab Page', 'ngOnInit()', "Initializer called..")
+  }
+
+  ngOnInit() {
+   
+  }
 
 }
