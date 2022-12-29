@@ -10,11 +10,15 @@ export class Tab1Page {
 
   constructor(private unviredSDK: UnviredCordovaSDK) {
     console.log('NgOnInit called. Waiting for call from the Unvired SDK...')
-    unviredSDK.logInfo('Tab Page', 'ngOnInit()', "Initializer called..")
+    
   }
 
   ngOnInit() {
    
+  }
+
+  addLog() {
+    this.unviredSDK.logInfo('Tab Page', 'ngOnInit()', Date() +  " Adding Log..")
   }
 
 }
